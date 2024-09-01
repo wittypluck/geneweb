@@ -19,7 +19,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 
 # Set up geneweb package and dependencies
 USER opam
-RUN git clone https://github.com/geneweb/geneweb.git ./geneweb \
+RUN git clone https://github.com/wittypluck/geneweb.git ./geneweb \
     && opam init --disable-sandboxing && opam update
 WORKDIR /home/opam/geneweb
 RUN opam pin add geneweb.dev . --no-action && opam depext geneweb 
